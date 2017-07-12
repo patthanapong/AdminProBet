@@ -58,7 +58,7 @@
 }
 </style>
 <body class="center">
-<div class="opacity">
+<div class="opacity center" style="width: 80%;">
     <div class="header">
         <h1>ProBetTH</h1>
                 <button id="myBtn" class="button button4">สมัครสมาชิก</button>

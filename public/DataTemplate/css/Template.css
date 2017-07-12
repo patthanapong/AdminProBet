@@ -1,12 +1,14 @@
 body {
     background-image: url("../image/casino.jpg");
     background-attachment: fixed;
-    width: 80%;
+
+    align-content: center;
     
 }
 
 .center{
     margin: auto;
+    align-content: center;
 }
 
 /*NavBar*/
@@ -80,7 +82,7 @@ div.gallery img {
 div.desc {
     padding: 15px;
     text-align: center;
-}*/
+}
 
 
 /*Manubar*/
