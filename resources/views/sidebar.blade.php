@@ -81,6 +81,20 @@
           </ul>
         </li>
 
+          <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>โปรโมชั่น</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="/test"><i class="fa fa-circle-o"></i>show</a></li>
+            
+            
+          </ul>
+        </li>
+
        
         @if(auth()->check())
                 <a href="/logout">Logout</a> 

@@ -80,7 +80,7 @@
                     <li><a href="#contact">สล็อต</a></li>
                     <li><a href="#contact">เกมส์เทเบิ้ล</a></li>
                     <li><a href="#contact">เกมส์อื่นๆ</a></li>
-                    <li><a href="#">โปรโมชั่น</a></li>
+                    <li><a href="#/promotion">โปรโมชั่น</a></li>
                     <li><a href="/admin/login">Admin</a></li>
                     {{-- <li style="float:right"><button id="myBtn" class="button button4">สมัครสมาชิก</button></li> --}}
                     {{-- <li style="float:right"><a href="/register">สมัครสมาชิก</a></li> --}}
