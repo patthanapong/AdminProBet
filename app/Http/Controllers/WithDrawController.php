@@ -38,7 +38,7 @@ class WithDrawController extends Controller
          ];
 
            $datas = request()->except([ '_token' ]);
-          //$this->validate($request,$rules);
+          $this->validate($request,$rules);
 
          try{
 

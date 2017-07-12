@@ -148,6 +148,7 @@
                         <label>
                             <span>Name</span>
                             <input type="text" name="fullname">
+                            <p style="color:red">{{ $errors->first('fullname') }}</p>
                         </label>
                     </div>
 
@@ -155,6 +156,7 @@
                         <label>
                             <span>Email</span>
                             <input type="email" name="email">
+                            <p style="color:red">{{ $errors->first('email') }}</p>
                         </label>
                     </div>
 
@@ -162,12 +164,14 @@
                         <label>
                             <span>Password</span>
                             <input type="password" name="password">
+                            <p style="color:red">{{ $errors->first('password') }}</p>
                         </label>
                     </div>
                      <div class="form-row">
                         <label>
                             <span>RetypePassword</span>
                             <input type="password" name="retypepassword">
+                            <p style="color:red">{{ $errors->first('retypepassword') }}</p>
                         </label>
                     </div>
 

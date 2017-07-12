@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use App\Activity_Log;
 
 class TestController extends Controller
 {
@@ -57,7 +59,7 @@ class TestController extends Controller
     {
           $rules =[
              'fullname' => 'required|min:5',
-             'email' => 'required|min:5',
+             'email' => 'required|string|email|max:255|unique:users,email',
             'password' => 'required|min:6',
             'retypepassword' => 'required|min:6',
            
@@ -80,7 +82,7 @@ class TestController extends Controller
         ]);
         return redirect('/');
 
-        }else{return "password error";}
+        }else{return redirect('register');}
 
         
        

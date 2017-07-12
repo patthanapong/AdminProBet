@@ -72,48 +72,48 @@
             	{{ csrf_field() }}
               <div class="box-body">
               	<div class="col-md-6">
-	                <div class="form-group{{ $errors->has('fullname') ? ' has-error' : '' }}">
+	                <div class="form-group">
 	                  <label for="name">ชื่อ</label>
 	                  <input type="text" class="form-control" id="name" placeholder="Enter Name" name="fullname" value="{{ old('fullname') }}">
-
-				        @if ($errors->has('fullname'))
+                    <p style="color:red">{{ $errors->first('fullname') }}</p>
+				        {{-- @if ($errors->has('fullname'))
 				            <span class="help-block">
 				                <strong>{{ $errors->first('fullname') }}</strong>
 				            </span>
-				        @endif   	                  
+				        @endif   	                   --}}
 	                </div>
 
-	                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+	                <div class="form-group">
 	                  <label for="Email">E-mail</label>
 	                  <input type="text" class="form-control" id="email" placeholder="Email" name="email" value="{{ old('email') }}">
-
-				        @if ($errors->has('email'))
+                    <p style="color:red">{{ $errors->first('email') }}</p>
+				        {{-- @if ($errors->has('email'))
 				            <span class="help-block">
 				                <strong>{{ $errors->first('email') }}</strong>
 				            </span>
-				        @endif   		                  
+				        @endif   		                   --}}
 	                </div>
 
-	                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+	                <div class="form-group">
 	                  <label for="Password">รหัสผ่าน</label>
 	                  <input type="password" class="form-control" id="Password" placeholder="New Password" name="password">
-
-				        @if ($errors->has('password'))
+                    <p style="color:red">{{ $errors->first('password') }}</p>
+				        {{-- @if ($errors->has('password'))
 				            <span class="help-block">
 				                <strong>{{ $errors->first('password') }}</strong>
 				            </span>
-				        @endif   		                  
+				        @endif   		                   --}}
 	                </div>
 
-                     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                     <div class="form-group">
 	                  <label for="Password">ยืนยันรหัสผ่าน</label>
 	                  <input type="password" class="form-control" id="Password" placeholder="New Password" name="retypepassword">
-
-				        @if ($errors->has('password'))
+                    <p style="color:red">{{ $errors->first('retypepassword') }}</p>
+				        {{-- @if ($errors->has('password'))
 				            <span class="help-block">
 				                <strong>{{ $errors->first('password') }}</strong>
 				            </span>
-				        @endif   		                  
+				        @endif   		                   --}}
 	                </div>
                     
                     

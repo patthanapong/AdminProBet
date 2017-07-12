@@ -41,6 +41,15 @@ class UserController extends Controller
         $checkretypepassword = request('retypepassword');
         $retypepassword = bcrypt(request('retypepassword'));
 
+        $rules =[
+             'fullname' => 'required|min:5',
+             'email' => 'required',
+            'password' => 'required|min:6'
+            
+         ];
+
+        $this->validate($request,$rules);
+
         if($checkpassword==$checkretypepassword){
         DB::table('users')->insert([
         'fullname' => $fullname,
@@ -58,41 +67,41 @@ class UserController extends Controller
         }else{return "password error";}
     }
 
-    public function edit($id)
-    {
-        $user = DB::table('users') 
-        ->where('id', $id)
-        ->first();
+    // public function edit($id)
+    // {
+    //     $user = DB::table('users') 
+    //     ->where('id', $id)
+    //     ->first();
         
 
-        return view('user.edit',compact('user'));
-    }
+    //     return view('user.edit',compact('user'));
+    // }
 
-     public function update(Request $request, $id)
-    {
-        $datas = request()->except(['_token',]);
-        $this->validate($request, $this->rules);
+    //  public function update(Request $request, $id)
+    // {
+    //     $datas = request()->except(['_token',]);
+    //     $this->validate($request, $this->rules);
 
-        DB::table('users')
-            ->where('id', $id)
-            ->update($datas);
-            session()->flash('message', 'Edit Success');
-            return redirect('/index');
-    }
+    //     DB::table('users')
+    //         ->where('id', $id)
+    //         ->update($datas);
+    //         session()->flash('message', 'Edit Success');
+    //         return redirect('/index');
+    // }
 
-    public function destroy($id)
-      {
-        try{
-            DB::table('users')
-            ->where('id',$id) 
-            ->delete();
+    // public function destroy($id)
+    //   {
+    //     try{
+    //         DB::table('users')
+    //         ->where('id',$id) 
+    //         ->delete();
 
-            session()->flash('message', 'Delete Success');
+    //         session()->flash('message', 'Delete Success');
 
-            return redirect('/index');
-        }catch (Exception $u){
-            abort(500);
-        }
-      }
+    //         return redirect('/index');
+    //     }catch (Exception $u){
+    //         abort(500);
+    //     }
+    //   }
 
 }

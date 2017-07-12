@@ -30,7 +30,7 @@ class AuthController extends Controller
             return redirect()->intended('/');
         }else{
             session()->flash('message', 'Login Fail');
-            return view('auth.login');
+            return redirect('/');
         }
     }
 
@@ -57,9 +57,9 @@ class AuthController extends Controller
     {
           $rules =[
              'fullname' => 'required|min:5',
-             'email' => 'required|min:5',
+             'email' => 'required|string|email|max:255|unique:users,email',
             'password' => 'required|min:6',
-            'retypepassword' => 'required|min:6',
+            'retypepassword' => 'required|min:6'
            
          ];
 
@@ -80,7 +80,7 @@ class AuthController extends Controller
         ]);
         return redirect('/');
 
-        }else{return "password error";}
+        }else{return redirect('/');}
 
         
        

@@ -33,7 +33,7 @@
 @endsection
 @section('footer')
 {{-- <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>  --}}
-  <script src="{{asset('date/jquery-1.10.2.min.js')}}"></script>
+  {{-- <script src="{{asset('date/jquery-1.10.2.min.js')}}"></script> --}}
   <script  src="{{asset('date/jquery-ui.min.js')}}"></script>
 
   <script  src="{{asset('date/jquery-ui-timepicker-addon.js')}}"></script>

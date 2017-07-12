@@ -1,5 +1,6 @@
 @extends('master')
 @section('head')
+
 {{-- <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -33,7 +34,7 @@
 @endsection
 @section('footer')
 {{-- <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>  --}}
-  <script src="{{asset('date/jquery-1.10.2.min.js')}}"></script>
+  {{-- <script src="{{asset('date/jquery-1.10.2.min.js')}}"></script> --}}
   <script  src="{{asset('date/jquery-ui.min.js')}}"></script>
 
   <script  src="{{asset('date/jquery-ui-timepicker-addon.js')}}"></script>
