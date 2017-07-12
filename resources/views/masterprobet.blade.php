@@ -80,7 +80,7 @@
                     <li><a href="#contact">สล็อต</a></li>
                     <li><a href="#contact">เกมส์เทเบิ้ล</a></li>
                     <li><a href="#contact">เกมส์อื่นๆ</a></li>
-                    <li><a href="#/promotion">โปรโมชั่น</a></li>
+                    <li><a href="/promotion">โปรโมชั่น</a></li>
                     <li><a href="/admin/login">Admin</a></li>
                     {{-- <li style="float:right"><button id="myBtn" class="button button4">สมัครสมาชิก</button></li> --}}
                     {{-- <li style="float:right"><a href="/register">สมัครสมาชิก</a></li> --}}
@@ -126,102 +126,101 @@
                     <div class="modal-header">
                     <span class="close">&times;</span>
                     <h2>Modal Header</h2>
+                </div>
+                <div class="modal-body">
+
+                    <div class="main-content">
+
+                            <!-- You only need this form and the form-register.css -->
+
+                            <form class="form-register" method="post" action="/addregister">
+
+                                {{ csrf_field() }}
+                                <div class="form-register-with-email">
+
+                                    <div class="form-white-background">
+
+                                        <div class="form-title-row">
+                                            <h1>Create an account</h1>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <label>
+                                                <span>Name</span>
+                                                <input type="text" name="fullname">
+                                                <p style="color:red">{{ $errors->first('fullname') }}</p>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <label>
+                                                <span>Email</span>
+                                                <input type="email" name="email">
+                                                <p style="color:red">{{ $errors->first('email') }}</p>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <label>
+                                                <span>Password</span>
+                                                <input type="password" name="password">
+                                                <p style="color:red">{{ $errors->first('password') }}</p>
+                                            </label>
+                                        </div>
+                                        <div class="form-row">
+                                            <label>
+                                                <span>RetypePassword</span>
+                                                <input type="password" name="retypepassword">
+                                                <p style="color:red">{{ $errors->first('retypepassword') }}</p>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <label class="form-checkbox">
+                                                <input type="checkbox" name="checkbox" checked>
+                                                <span>I agree to the <a href="#">terms and conditions</a></span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <button type="submit">Register</button>
+                                        </div>
+
+                                    </div>
+
+                                    <a href="#" class="form-log-in-with-existing">Already have an account? Login here &rarr;</a>
+
+                                </div>
+
+                                <div class="form-sign-in-with-social">
+
+                                    <div class="form-row form-title-row">
+                                        <span class="form-title">Sign in with</span>
+                                    </div>
+
+                                    <a href="#" class="form-google-button">Google</a>
+                                    <a href="#" class="form-facebook-button">Facebook</a>
+                                    <a href="#" class="form-twitter-button">Twitter</a>
+
+                                </div>
+
+                            </form>
+
                     </div>
-                    <div class="modal-body">
 
-                                <div class="main-content">
-
-        <!-- You only need this form and the form-register.css -->
-
-        <form class="form-register" method="post" action="/addregister">
-
-        {{ csrf_field() }}
-            <div class="form-register-with-email">
-
-                <div class="form-white-background">
-
-                    <div class="form-title-row">
-                        <h1>Create an account</h1>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Name</span>
-                            <input type="text" name="fullname">
-                            <p style="color:red">{{ $errors->first('fullname') }}</p>
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Email</span>
-                            <input type="email" name="email">
-                            <p style="color:red">{{ $errors->first('email') }}</p>
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Password</span>
-                            <input type="password" name="password">
-                            <p style="color:red">{{ $errors->first('password') }}</p>
-                        </label>
-                    </div>
-                     <div class="form-row">
-                        <label>
-                            <span>RetypePassword</span>
-                            <input type="password" name="retypepassword">
-                            <p style="color:red">{{ $errors->first('retypepassword') }}</p>
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label class="form-checkbox">
-                            <input type="checkbox" name="checkbox" checked>
-                            <span>I agree to the <a href="#">terms and conditions</a></span>
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <button type="submit">Register</button>
-                    </div>
 
                 </div>
-
-                <a href="#" class="form-log-in-with-existing">Already have an account? Login here &rarr;</a>
-
-            </div>
-
-            <div class="form-sign-in-with-social">
-
-                <div class="form-row form-title-row">
-                    <span class="form-title">Sign in with</span>
-                </div>
-
-                <a href="#" class="form-google-button">Google</a>
-                <a href="#" class="form-facebook-button">Facebook</a>
-                <a href="#" class="form-twitter-button">Twitter</a>
-
-            </div>
-
-        </form>
-
-    </div>
-
-
-                    </div>
                     <div class="modal-footer">
-                    <h3>Modal Footer</h3>
+                        <h3>Modal Footer</h3>
                     </div>
-                </div>
-
             </div>
+
+</div>
 
 
             
             @yield('content')
             
-</div> 
 
     <div class="footer">
             <h1>FOOTER</h1>

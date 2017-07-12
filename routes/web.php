@@ -58,13 +58,11 @@ Route::get('/activity/index', 'ActivityLogController@index');
 
 
 
-    
-
 });
 
 Route::get('/profile', 'ProfileController@pro');
 Route::post('/profile', 'ProfileController@update');
-
+Route::get('/promotion', 'FroalaController@show');
 
 
 

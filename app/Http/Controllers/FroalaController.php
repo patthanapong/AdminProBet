@@ -52,12 +52,12 @@ class FroalaController extends Controller
         // return redirect('/');
 
         // }else{return redirect('/');}
-       
-
-
         
-       
+    }
 
-        
+    public function show()
+    {
+        $contents = content::get();
+        return view('promotion' ,compact('contents'));
     }
 }
