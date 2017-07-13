@@ -29,7 +29,7 @@
 
             <div class="mySlides fade">
                 <div class="numbertext">3 / 3</div>
-                    <img src="/DataTemplate/image/casino2.png" style="width:96%">
+                    <img src="/DataTemplate/image/casino.jpg" style="width:100%">
                 <div class="text">Caption Three</div>
             </div>
 

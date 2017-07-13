@@ -28,26 +28,44 @@
   </style> --}}   
 @endsection
 @section('content')
+      <h1>
+        Promotion
+        <small>แก้ไขหน้าโปรโมชั่น</small>
+      </h1>
+      <section class="content">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="box">
+                  
+                  <!-- /.box-header -->
+                  
 
+          <form method="post" action="/show">
+          {{ csrf_field() }}
+        <div id="editor">
+            
+            <lable>Title</lable>
+            <input type="text" class="form-control" name="title">
 
-    <form method="post" action="/show">
-    {{ csrf_field() }}
-  <div id="editor">
-      
-       <lable>Title</lable>
-       <input type="text" name="title">
+              <lable>Key Words</lable>
+            <input type="text" class="form-control" name="keywords">
+            
+              <textarea id="froala-editor" name="data">Initialize the Froala WYSIWYG HTML Editor on a textarea.</textarea>
 
-        <lable>Key Words</lable>
-       <input type="text" name="keywords">
-       
-        <textarea id="froala-editor" name="data">Initialize the Froala WYSIWYG HTML Editor on a textarea.</textarea>
-
-      
-       
-      <button type="submit" >บันทึก</button>
-  </div>
-  </form>
-
+            
+            
+            <button type="submit" class="btn btn-primary" >บันทึก</button>
+        </div>
+        </form>
+                
+                  <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </section>
 @endsection
 
 @section('footer')
