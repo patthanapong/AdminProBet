@@ -11,14 +11,14 @@
         {{-- <div class="col-12 col-s-12 ">
             <p>{!! $con -> body !!}</p>
         </div> --}}
-        <br><br>
+        
         <blockquote style="background-color: hsla(0, 0%, 100%, 0.5);color: black;">
          <p>{!! $con -> body !!}</p>
         <p>{!! $con -> keywords !!}</p>
         </blockquote>
 
     
-        <div class="col-12 col-s-12 "></div>
+        {{-- <div class="col-12 col-s-12 "></div> --}}
     </div> 
     @endforeach
     
