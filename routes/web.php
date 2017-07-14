@@ -38,31 +38,33 @@ Route::get('/', function () {
 
 Route::group(['middleware'=>['auth']],function ()  {
 
-
-
-Route::get('/admin', function (){
+    Route::get('/admin', function (){
     return view('index');
 });
 
-Route::get('/user/index', 'UserController@index');
-Route::get('/user/create', 'UserController@create');
-Route::post('/user', 'UserController@store');
-Route::get('/user/edit/{user}', 'UserController@edit');
-Route::post('/user/edit/{user}', 'UserController@update');
-Route::delete('/user/index/{user}', 'UserController@destroy');
+    Route::get('/user/index', 'UserController@index');
+    Route::get('/user/create', 'UserController@create');
+    Route::post('/user', 'UserController@store');
+    Route::get('/user/edit/{user}', 'UserController@edit');
+    Route::post('/user/edit/{user}', 'UserController@update');
+    Route::delete('/user/index/{user}', 'UserController@destroy');
 
-Route::resource('/dolladeposit', 'DepositController');
-Route::resource('/dollawithdraw', 'WithDrawController');
+    Route::resource('/dolladeposit', 'DepositController');
+    Route::resource('/dollawithdraw', 'WithDrawController');
 
-Route::get('/activity/index', 'ActivityLogController@index');
+    Route::get('/activity/index', 'ActivityLogController@index');
 
-
+    
 
 });
 
 Route::get('/profile', 'ProfileController@pro');
 Route::post('/profile', 'ProfileController@update');
 Route::get('/promotion', 'FroalaController@show');
+
+Route::get('/uploads', 'FroalaController@index');
+Route::post('/uploads', 'FroalaController@store');
+
 
 
 

@@ -7,10 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class contents extends Model
 {
      protected $fillable = [
-            'user_id',
-            'bankdeposit', 
+            'user_id', 
             'title', 
-            'body', 
+            'path', 
             'keywords', 
             'rememberToken',
             

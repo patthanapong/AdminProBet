@@ -92,6 +92,22 @@
             <li><a href="/test"><i class="fa fa-circle-o"></i>show</a></li>
             
             
+            
+          </ul>
+        </li>
+
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>upload</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="/uploads"><i class="fa fa-circle-o"></i>index</a></li>
+            
+            
+            
           </ul>
         </li>
 

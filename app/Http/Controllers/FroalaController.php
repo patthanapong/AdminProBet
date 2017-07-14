@@ -3,25 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\content;
+use App\contents;
 class FroalaController extends Controller
 {
+    public function index()
+    {
+        return view('upload.index');
+    }
+    
     public function store(Request $request)
     {
-        $title = request('title');
-        $keywords = request('keywords');
-        $data =request('data');
+        // $title = request('title');
+        // $keywords = request('keywords');
+        // $data =request('data');
+         $path = $request->photo->storeAs('images', $request->photo->getClientOriginalName() );
 
-         content::create([
+         contents::create([
                     'user_id' => auth()->user()->id, 
-                    'title' =>$title,
-                    'keywords' =>$keywords, 
-                    'body'=> $data
+                    'title' => request('title'),
+                    'keywords' => request('keywords'), 
+                    'path'=> $path
          ]);
         //  $data = request()->except([ '_token' ]);
-         $data = request('data');
+        //  $path = request('path');
         
-        return view('froala.show' ,compact('data'));
+        return view('upload.show' ,compact('path'));
 
 
 
@@ -57,7 +63,7 @@ class FroalaController extends Controller
 
     public function show()
     {
-        $contents = content::get();
+        $contents = contents::get();
         return view('promotion' ,compact('contents'));
     }
 }

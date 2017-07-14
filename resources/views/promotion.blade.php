@@ -13,7 +13,7 @@
         </div> --}}
         
         <blockquote style="background-color: hsla(0, 0%, 100%, 0.5);color: black;">
-         <p>{!! $con -> body !!}</p>
+         <p>{!! $con -> path !!}</p>
         <p>{!! $con -> keywords !!}</p>
         </blockquote>
 

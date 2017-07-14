@@ -17,7 +17,7 @@ class CreateContentTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->string('title');
-            $table->string('body');
+            $table->string('path');
             $table->string('keywords');
             $table->rememberToken();
             $table->timestamps();
